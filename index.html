@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3ec">
+  <meta name="description" content="A personal page, ready for your information.">
+  <title>Your Name | Welcome</title>
+  <style>
+    :root { color-scheme: light; --ink:#17221e; --muted:#5e6c64; --paper:#f6f3ec; --green:#285b47; --line:#d9ded6; }
+    * { box-sizing:border-box }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif }
+    header, main, footer { width:min(100% - 40px, 960px); margin-inline:auto }
+    header { padding:28px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center }
+    .brand { font-weight:750; letter-spacing:.02em }
+    nav { display:flex; gap:22px } a { color:var(--green); text-decoration-thickness:1px; text-underline-offset:4px }
+    main { padding:84px 0 76px }
+    .eyebrow { color:var(--green); font-size:.82rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase }
+    h1 { max-width:760px; margin:12px 0 20px; font-size:clamp(2.8rem,8vw,5.5rem); letter-spacing:-.06em; line-height:1.02 }
+    .intro { max-width:660px; color:var(--muted); font-size:1.2rem }
+    .button { display:inline-block; margin-top:18px; padding:12px 20px; border-radius:999px; background:var(--green); color:white; text-decoration:none; font-weight:650 }
+    section { padding:36px 0; border-top:1px solid var(--line) }
+    h2 { margin:0 0 10px; font-size:1.45rem; letter-spacing:-.02em }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:20px }
+    .card { padding:20px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.45) }
+    .card h3 { margin:0 0 6px; font-size:1.05rem }
+    .card p { margin:0; color:var(--muted) }
+    footer { padding:24px 0 36px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem }
+    @media(max-width:520px) { header { align-items:flex-start; gap:14px; flex-direction:column } nav { gap:16px } main { padding:60px 0 48px } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#top" style="color:inherit;text-decoration:none">YOUR NAME</a>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#updates">Updates</a><a href="#contact">Contact</a></nav>
+  </header>
+  <main id="top">
+    <p class="eyebrow">A little space on the internet</p>
+    <h1>Hello, I’m Your Name.</h1>
+    <p class="intro">Welcome to my page. I’m putting together a few things about myself and what I do. Check back soon for updates.</p>
+    <a class="button" href="#about">Get to know me</a>
+    <section id="about" style="margin-top:72px">
+      <h2>About</h2>
+      <p>Write a short introduction here. Share what you do, what you care about, or anything you’d like visitors to know.</p>
+    </section>
+    <section id="updates">
+      <h2>What’s here</h2>
+      <div class="cards">
+        <article class="card"><h3>A little about me</h3><p>Add a project, interest, service, or detail you want people to discover.</p></article>
+        <article class="card"><h3>What’s new</h3><p>Use this space for an announcement, upcoming event, or recent update.</p></article>
+        <article class="card"><h3>Say hello</h3><p>Tell visitors the best way to reach you, or link to a social profile.</p></article>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Ready to connect? Replace this line with your preferred contact details or a link.</p>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Your Name · Made with care</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
