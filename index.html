@@ -3,60 +3,171 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f3ec">
-  <meta name="description" content="A personal page, ready for your information.">
-  <title>Your Name | Welcome</title>
+  <meta name="theme-color" content="#f3eee3">
+  <meta name="description" content="Discover Futurain Kodo-Kutki Millet Flour: its ingredients, price breakdown, packaging and journey.">
+  <title>Futurain | Kodo-Kutki Millet Flour</title>
   <style>
-    :root { color-scheme: light; --ink:#17221e; --muted:#5e6c64; --paper:#f6f3ec; --green:#285b47; --line:#d9ded6; }
-    * { box-sizing:border-box }
-    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif }
-    header, main, footer { width:min(100% - 40px, 960px); margin-inline:auto }
-    header { padding:28px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center }
-    .brand { font-weight:750; letter-spacing:.02em }
-    nav { display:flex; gap:22px } a { color:var(--green); text-decoration-thickness:1px; text-underline-offset:4px }
-    main { padding:84px 0 76px }
-    .eyebrow { color:var(--green); font-size:.82rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase }
-    h1 { max-width:760px; margin:12px 0 20px; font-size:clamp(2.8rem,8vw,5.5rem); letter-spacing:-.06em; line-height:1.02 }
-    .intro { max-width:660px; color:var(--muted); font-size:1.2rem }
-    .button { display:inline-block; margin-top:18px; padding:12px 20px; border-radius:999px; background:var(--green); color:white; text-decoration:none; font-weight:650 }
-    section { padding:36px 0; border-top:1px solid var(--line) }
-    h2 { margin:0 0 10px; font-size:1.45rem; letter-spacing:-.02em }
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:20px }
-    .card { padding:20px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.45) }
-    .card h3 { margin:0 0 6px; font-size:1.05rem }
-    .card p { margin:0; color:var(--muted) }
-    footer { padding:24px 0 36px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem }
-    @media(max-width:520px) { header { align-items:flex-start; gap:14px; flex-direction:column } nav { gap:16px } main { padding:60px 0 48px } }
+    :root{color-scheme:light;--ink:#202a22;--muted:#667166;--paper:#f3eee3;--green:#244d37;--green2:#39714c;--gold:#d49a28;--clay:#b5532f;--line:#d9d7c9;--white:#fffdf7}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+    header,main,footer{width:min(100% - 40px,1080px);margin-inline:auto}
+    header{padding:22px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:22px}
+    .brand{font-family:Georgia,serif;font-weight:800;letter-spacing:.04em;color:var(--green);text-decoration:none}
+    nav{display:flex;gap:20px;flex-wrap:wrap}
+    nav a{font-size:.92rem;color:var(--green);text-decoration:none}
+    nav a:hover{text-decoration:underline;text-underline-offset:4px}
+    main{padding:48px 0 70px}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch}
+    .hero-copy{padding:34px 0}
+    .eyebrow{color:var(--clay);font-size:.8rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    h1{max-width:680px;margin:12px 0 18px;font:500 clamp(2.8rem,7vw,5.4rem)/.98 Georgia,serif;letter-spacing:-.055em;color:var(--green)}
+    .intro{max-width:630px;color:var(--muted);font-size:1.12rem}
+    .pills{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}
+    .pill{border:1px solid #c7cbbb;border-radius:999px;padding:6px 12px;color:var(--green);font-size:.86rem;background:rgba(255,253,247,.55)}
+    .button{display:inline-block;margin-top:4px;padding:11px 18px;border-radius:999px;background:var(--green);color:white;text-decoration:none;font-weight:700}
+    .pack-card{position:relative;min-height:370px;overflow:hidden;border:1px solid #c7b99d;border-radius:28px;background:radial-gradient(ellipse at 50% 40%,#e7d3b0,#c8a477 68%,#9a744f);display:grid;place-items:center;padding:28px}
+    .pack{width:min(250px,75%);min-height:300px;padding:24px 18px 18px;border:2px solid rgba(255,255,255,.65);border-radius:24px 24px 34px 34px;background:linear-gradient(145deg,#d4b286,#bd9568);box-shadow:18px 24px 28px #36291845, inset 0 0 20px #fff5;transform:rotate(-3deg);text-align:center;color:#1e3526;position:relative}
+    .pack:before{content:"";position:absolute;left:0;right:0;top:23px;border-top:3px dashed var(--gold)}
+    .seal{font-size:.65rem;letter-spacing:.14em;font-weight:800;margin-top:0}
+    .seal-line{height:28px}
+    .seal-line:after{content:"";display:block;margin:12px auto 0;width:76%;border-top:1px dashed var(--green)}
+    .sun-mark{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;margin:9px auto 10px;background:var(--green);color:#f2e5c9;font:32px Georgia,serif;box-shadow:0 0 0 4px #d9bc8e}
+    .pack-brand{font:800 1.35rem Georgia,serif;letter-spacing:.06em;color:var(--green)}
+    .pack-sub{color:var(--clay);font-size:.68rem;letter-spacing:.13em;font-weight:800;margin:2px 0 14px}
+    .pack-product{background:#f6ecd9;border:2px solid var(--green);border-radius:12px;padding:9px 6px;font:700 1rem Georgia,serif}
+    .pack-product small{display:block;font:700 .62rem system-ui;letter-spacing:.08em;margin-top:3px}
+    .pack-claims{margin:15px 0;padding:9px 5px;border-radius:10px;background:var(--green);color:#fff9e9;font-size:.61rem;line-height:1.5}
+    .pack-weight{font-weight:800;font-size:.78rem;letter-spacing:.05em}
+    .pack-caption{position:absolute;bottom:12px;right:16px;color:#fffdf7;font-size:.76rem;text-shadow:0 1px 4px #333}
+    section{padding:36px 0;border-top:1px solid var(--line);scroll-margin-top:20px}
+    .section-kicker{color:var(--clay);font-size:.76rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+    h2{margin:4px 0 10px;font:500 clamp(1.7rem,3vw,2.3rem)/1.15 Georgia,serif;color:var(--green);letter-spacing:-.025em}
+    h3{margin:0 0 6px;font-size:1rem;color:var(--green)}
+    .muted{color:var(--muted)}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .feature,.journey-card{padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--white)}
+    .feature p,.journey-card p{margin:0;color:var(--muted);font-size:.94rem}
+    .ingredient-line{font-size:1.15rem;font-weight:700;color:var(--green)}
+    .cost-list{max-width:760px;margin-top:22px;display:grid;gap:16px}
+    .cost-row{display:grid;gap:7px}
+    .cost-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+    .cost-amount{white-space:nowrap;font-variant-numeric:tabular-nums}
+    .track{height:9px;overflow:hidden;border-radius:99px;background:#e1e5de}
+    .track span{display:block;height:100%;border-radius:inherit;background:var(--green2)}
+    .total{margin-top:21px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;max-width:760px;font-size:1.1rem}
+    .note{color:var(--muted);font-size:.9rem}
+    .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .step{display:flex;gap:13px}
+    .step-no{flex:0 0 34px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-weight:800}
+    .nutrition-wrap{overflow-x:auto;margin-top:18px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+    table{border-collapse:collapse;width:100%;min-width:400px}
+    th,td{text-align:left;padding:10px 14px;border-bottom:1px solid #e8e5db}
+    th{background:#e8eadf;color:var(--green);font-size:.9rem}
+    tr:last-child td{border-bottom:0}
+    .footer-note{padding:20px;border-radius:18px;background:var(--green);color:#f6f0e2}
+    .footer-note h2{color:#f6f0e2}
+    footer{padding:24px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.hero{grid-template-columns:1fr}.hero-copy{padding:12px 0}.pack-card{min-height:330px}.feature-grid,.journey{grid-template-columns:1fr}.pack{min-height:275px}}
+    @media(max-width:540px){header{align-items:flex-start;flex-direction:column;gap:12px}nav{gap:12px 16px}main{padding-top:30px}header,main,footer{width:min(100% - 30px,1080px)}}
   </style>
 </head>
 <body>
   <header>
-    <a class="brand" href="#top" style="color:inherit;text-decoration:none">YOUR NAME</a>
-    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#updates">Updates</a><a href="#contact">Contact</a></nav>
+    <a class="brand" href="#top">FUTURAIN</a>
+    <nav aria-label="Main navigation"><a href="#product">The product</a><a href="#breakdown">₹299 breakdown</a><a href="#packaging">Packaging</a><a href="#journey">Journey</a></nav>
   </header>
   <main id="top">
-    <p class="eyebrow">A little space on the internet</p>
-    <h1>Hello, I’m Your Name.</h1>
-    <p class="intro">Welcome to my page. I’m putting together a few things about myself and what I do. Check back soon for updates.</p>
-    <a class="button" href="#about">Get to know me</a>
-    <section id="about" style="margin-top:72px">
-      <h2>About</h2>
-      <p>Write a short introduction here. Share what you do, what you care about, or anything you’d like visitors to know.</p>
-    </section>
-    <section id="updates">
-      <h2>What’s here</h2>
-      <div class="cards">
-        <article class="card"><h3>A little about me</h3><p>Add a project, interest, service, or detail you want people to discover.</p></article>
-        <article class="card"><h3>What’s new</h3><p>Use this space for an announcement, upcoming event, or recent update.</p></article>
-        <article class="card"><h3>Say hello</h3><p>Tell visitors the best way to reach you, or link to a social profile.</p></article>
+    <div class="hero" id="product">
+      <div class="hero-copy">
+        <p class="eyebrow">The future in grains</p>
+        <h1>Kodo-Kutki Millet Flour</h1>
+        <p class="intro">A traditional millet flour made from Kodo and Kutki, stone-ground for everyday cooking. This page shares what goes into the product and how it makes its way from grower to shelf.</p>
+        <div class="pills"><span class="pill">500 g pack</span><span class="pill">50% Kodo · 50% Kutki</span><span class="pill">Stone-ground</span></div>
+        <a class="button" href="#breakdown">See the price breakdown</a>
+      </div>
+      <div class="pack-card" role="img" aria-label="Illustration of a warm kraft-colored Futurain Kodo-Kutki Millet Flour pouch">
+        <div class="pack">
+          <div class="seal">TEAR · THREAD SEAL</div><div class="seal-line"></div>
+          <div class="sun-mark" aria-hidden="true">✦</div>
+          <div class="pack-brand">FUTURAIN</div>
+          <div class="pack-sub">THE FUTURE IN GRAINS</div>
+          <div class="pack-product">कोदो-कुटकी आटा<small>KODO-KUTKI MILLET FLOUR</small></div>
+          <div class="pack-claims">STONE-GROUND · ORGANICALLY GROWN<br>NO ARTIFICIAL COLOURS<br>NO ADDED PRESERVATIVES</div>
+          <div class="pack-weight">NET QUANTITY · 500 g</div>
+        </div>
+        <span class="pack-caption">Product pouch concept</span>
+      </div>
+    </div>
+
+    <section>
+      <p class="section-kicker">What’s inside</p>
+      <h2>Two millets, traditionally stone-ground</h2>
+      <p class="ingredient-line">Kodo Millet (50%) + Kutki Millet (50%)</p>
+      <div class="feature-grid">
+        <article class="feature"><h3>Made for everyday recipes</h3><p>Use the flour for rotis, bhakri, dosa, pancakes, porridge and other dishes.</p></article>
+        <article class="feature"><h3>Simple preparation</h3><p>Mix with water as needed, knead into a soft dough and cook thoroughly.</p></article>
+        <article class="feature"><h3>Store with care</h3><p>Keep in a cool, dry place away from sunlight and moisture. Seal the pack tightly after opening.</p></article>
       </div>
     </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Ready to connect? Replace this line with your preferred contact details or a link.</p>
+
+    <section id="breakdown">
+      <p class="section-kicker">Price transparency</p>
+      <h2>Where your ₹299 goes</h2>
+      <p class="note">The bars show each amount as a share of the ₹299 breakdown you provided.</p>
+      <div class="cost-list" aria-label="₹299 price breakdown">
+        <div class="cost-row"><div class="cost-top"><span>Farmers’ collective</span><strong class="cost-amount">₹115</strong></div><div class="track" aria-hidden="true"><span style="width:38.46%"></span></div></div>
+        <div class="cost-row"><div class="cost-top"><span>Stone-milling</span><strong class="cost-amount">₹40</strong></div><div class="track" aria-hidden="true"><span style="width:13.38%"></span></div></div>
+        <div class="cost-row"><div class="cost-top"><span>Packaging</span><strong class="cost-amount">₹28</strong></div><div class="track" aria-hidden="true"><span style="width:9.36%"></span></div></div>
+        <div class="cost-row"><div class="cost-top"><span>Transport and tracing</span><strong class="cost-amount">₹22</strong></div><div class="track" aria-hidden="true"><span style="width:7.36%"></span></div></div>
+        <div class="cost-row"><div class="cost-top"><span>Retailer</span><strong class="cost-amount">₹40</strong></div><div class="track" aria-hidden="true"><span style="width:13.38%"></span></div></div>
+        <div class="cost-row"><div class="cost-top"><span>Taxes</span><strong class="cost-amount">₹14</strong></div><div class="track" aria-hidden="true"><span style="width:4.68%"></span></div></div>
+        <div class="cost-row"><div class="cost-top"><span>Futurain</span><strong class="cost-amount">₹40</strong></div><div class="track" aria-hidden="true"><span style="width:13.38%"></span></div></div>
+      </div>
+      <div class="total"><strong>Total shown</strong><strong>₹299</strong></div>
+    </section>
+
+    <section id="packaging">
+      <p class="section-kicker">The pack</p>
+      <h2>Kraft paper, with a next step after use</h2>
+      <p class="muted">The pouch is designed to protect the flour and make its end-of-life instructions clear.</p>
+      <div class="feature-grid">
+        <article class="feature"><h3>Material</h3><p>Kraft paper · 180 GSM</p></article>
+        <article class="feature"><h3>Biodegradable</h3><p>Made to break down after use when composted under suitable conditions.</p></article>
+        <article class="feature"><h3>Keep the flour fresh</h3><p>Store in a cool, dry place away from direct sun and moisture. Reseal tightly after opening.</p></article>
+      </div>
+      <div class="footer-note" style="margin-top:18px">
+        <p class="section-kicker" style="color:#e7bf67">When the pack is empty</p>
+        <h3 style="color:#f6f0e2">Tear it up, ribbon and all.</h3>
+        <p>Put the torn pack in a compost bin. It is designed to return to soil in about three months. You can also send it for paper recycling.</p>
+      </div>
+    </section>
+
+    <section id="journey">
+      <p class="section-kicker">From grower to shelf</p>
+      <h2>The product journey</h2>
+      <div class="journey">
+        <article class="journey-card step"><span class="step-no">1</span><div><h3>From the farm</h3><p>The journey starts with the Sukhdei Baghel group in Kondagaon, Bastar. Grower code: BK-0417.</p></div></article>
+        <article class="journey-card step"><span class="step-no">2</span><div><h3>Farm to mill · 42 km</h3><p>The farm-to-mill journey is 42 km, entirely within Bastar. The Kodo and Kutki millets are blended equally and stone-milled.</p></div></article>
+        <article class="journey-card step"><span class="step-no">3</span><div><h3>Made and packed in Jagdalpur</h3><p>Manufacturer address: Jagdalpur, Bastar, Chhattisgarh. Packaging date: 01/10/2050.</p></div></article>
+      </div>
+      <p class="note" style="margin-top:16px"><strong>Trace this pack:</strong> Batch code FKF501001 · Trace code FKF-50-1001-BT · Packaging date 01/10/2050.</p>
+    </section>
+
+    <section>
+      <p class="section-kicker">Nutrition information</p>
+      <h2>Approximate values per 100 g</h2>
+      <div class="nutrition-wrap"><table><thead><tr><th>Nutrient</th><th>Amount</th></tr></thead><tbody>
+        <tr><td>Energy</td><td>348 kcal</td></tr><tr><td>Protein</td><td>9.8 g</td></tr><tr><td>Carbohydrate</td><td>72.4 g</td></tr><tr><td>Total sugars</td><td>1.2 g</td></tr><tr><td>Added sugars</td><td>0 g</td></tr><tr><td>Total fat</td><td>3.6 g</td></tr><tr><td>Saturated fat</td><td>0.8 g</td></tr><tr><td>Dietary fibre</td><td>8.5 g</td></tr><tr><td>Sodium</td><td>5 mg</td></tr>
+      </tbody></table></div>
+      <p class="note">Values are transcribed from the supplied pouch concept.</p>
+    </section>
+    <section class="footer-note">
+      <p class="section-kicker" style="color:#e7bf67">Know your product</p>
+      <h2>Good food has a story.</h2>
+      <p>Futurain Kodo-Kutki Millet Flour brings together two Indian millets, traditional stone-milling and a traceable journey from grower to shelf.</p>
     </section>
   </main>
-  <footer>© <span id="year"></span> Your Name · Made with care</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer>FUTURAIN · Kodo-Kutki Millet Flour · Product details from the supplied pouch concept</footer>
 </body>
 </html>
